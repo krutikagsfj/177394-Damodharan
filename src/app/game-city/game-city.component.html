@@ -1,0 +1,54 @@
+    <!-- Developer:DAMODHARAN S
+    Created Date:6/5/2019
+    Modified Date:NIL
+    Compoent Name:game-city.component.html
+     -->
+     <!-- class container for placing in center -->
+    <div class="container">
+      <!-- // header  -->
+    <h3>Welcome To GameCity: Experience the Online Gaming Experience</h3>
+    <form [formGroup]="gameForm" (ngSubmit)="onSubmit()">
+      <!-- adding table -->
+      <table>
+       <tr>
+        <td>Name</td>
+        <div class="form-group">
+        <td><input type="text" class="form-control" formControlName="name" pattern="[a-zA-Z]*" placeholder="Enter Name">
+         <div *ngIf="submitted &&gameForm.controls.name.errors" class="error">
+           <div class="text-danger" *ngIf="gameForm.controls.name.errors.required">name is required</div>
+           <div class="text-danger" *ngIf="gameForm.controls.name.errors.pattern">name is wrong</div>
+           </div>
+        </td>
+       </div>
+       </tr>
+       <tr>
+         <!-- addding bootstarp -->
+        <td>Address</td>
+        <div class="form-group">
+        <td><input type="text" class="form-control" formControlName="address" placeholder="Enter Address">
+         <div *ngIf="submitted &&gameForm.controls.address.errors"class="error">
+           <div class="text-danger" *ngIf="gameForm.controls.address.errors.required">address is required</div>
+           </div>
+        </td>
+       </div>
+       </tr>
+       <tr>
+        <td>Amount</td>
+        <!-- adding class from form group -->
+        <div class="form-group">
+        <td><input type="number" class="form-control" [formControl]="amount" placeholder="Enter Amount to add">
+         <div *ngIf="submitted &&gameForm.controls.amount.errors"class="error">
+    
+           <div class="text-danger" *ngIf="gameForm.controls.amount.errors.required">Amount is required</div>
+    
+           </div> 
+        </td>
+       </div>
+       </tr>
+      </table>
+      <!-- using button by bootstarp -->
+      <button class="btn btn-success" (click) ="getAmount()">Buy Card</button>
+       <br>
+       Note: 100 Rs will be deducted for service charges
+    </form>
+</div>

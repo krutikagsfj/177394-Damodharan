@@ -1,0 +1,29 @@
+{
+   
+    "games":[{
+     "id":1,
+     "gName":"Shooting",
+     "price":105
+    },
+    {
+     "id":2,
+     "gName":"Angry Birds",
+     "price":95
+    },
+    {
+        "id":2,
+        "gName":"Temple Run",
+        "price":200
+       },
+       {
+        "id":2,
+        "gName":"Bike race",
+        "price":90
+       },
+       {
+        "id":2,
+        "gName":"Air Control",
+        "price":800
+       }
+   ]
+}
